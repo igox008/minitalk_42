@@ -6,7 +6,7 @@
 /*   By: alaassir <alaassir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 13:02:39 by alaassir          #+#    #+#             */
-/*   Updated: 2024/02/03 13:09:28 by alaassir         ###   ########.fr       */
+/*   Updated: 2024/02/04 22:56:05 by alaassir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }
 
 static void	do_putnbr(int n)
@@ -37,5 +37,5 @@ static void	do_putnbr(int n)
 
 void	ft_putnbr(int n)
 {
-    do_putnbr(n);
+	do_putnbr(n);
 }

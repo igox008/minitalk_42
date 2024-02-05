@@ -6,7 +6,7 @@
 /*   By: alaassir <alaassir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 05:48:54 by alaassir          #+#    #+#             */
-/*   Updated: 2024/02/03 13:05:56 by alaassir         ###   ########.fr       */
+/*   Updated: 2024/02/05 04:18:38 by alaassir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 # define MINITALK_H
 
 # include <unistd.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <signal.h>
-# include <strings.h>
 
 # define RESET "\x1b[0m"
 # define BOLD "\x1b[1m"
@@ -36,7 +34,6 @@ typedef int	t_boolean;
 
 int		ft_atoi(char *str);
 int		ft_putstr(char *str);
-char	*ft_strjoin(char *s1, char c);
 void	ft_bzero(char *s);
 void	ft_putnbr(int n);
 

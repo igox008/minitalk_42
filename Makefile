@@ -21,19 +21,19 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
 CLIENT_EXC = client
-C_SRC = client.c utils/ft_atoi.c utils/ft_putstr.c utils/ft_strjoin.c utils/ft_bzero.c utils/ft_putnbr.c
+C_SRC = client.c utils/ft_atoi.c utils/ft_putstr.c utils/ft_bzero.c utils/ft_putnbr.c
 C_OBJ = $(C_SRC:.c=.o)
 
 CLIENT_EXC_BONUS = client_bonus
-C_SRC_BONUS = client_bonus.c utils/ft_atoi.c utils/ft_putstr.c utils/ft_strjoin.c utils/ft_bzero.c utils/ft_putnbr.c
+C_SRC_BONUS = client_bonus.c utils/ft_atoi.c utils/ft_putstr.c utils/ft_bzero.c utils/ft_putnbr.c
 C_OBJ_BONUS = $(C_SRC_BONUS:.c=.o)
 
 SERVER_EXC = server
-S_SRC = server.c utils/ft_atoi.c utils/ft_putstr.c utils/ft_strjoin.c utils/ft_bzero.c utils/ft_putnbr.c
+S_SRC = server.c utils/ft_atoi.c utils/ft_putstr.c utils/ft_bzero.c utils/ft_putnbr.c
 S_OBJ = $(S_SRC:.c=.o)
 
 SERVER_EXC_BONUS = server_bonus
-S_SRC_BONUS = server_bonus.c utils/ft_atoi.c utils/ft_putstr.c utils/ft_strjoin.c utils/ft_bzero.c utils/ft_putnbr.c
+S_SRC_BONUS = server_bonus.c utils/ft_atoi.c utils/ft_putstr.c utils/ft_bzero.c utils/ft_putnbr.c
 S_OBJ_BONUS = $(S_SRC_BONUS:.c=.o)
 
 all : $(CLIENT_EXC) $(SERVER_EXC)

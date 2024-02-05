@@ -6,7 +6,7 @@
 /*   By: alaassir <alaassir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 05:54:43 by alaassir          #+#    #+#             */
-/*   Updated: 2024/02/03 13:07:40 by alaassir         ###   ########.fr       */
+/*   Updated: 2024/02/05 04:20:37 by alaassir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,29 +23,30 @@ static int	how_much(int c)
 	return (1);
 }
 
-static int	handle_out(char c, int flush)
+static int	handle_out(unsigned char c, int flush)
 {
-	static char	prnt[5];
-	static int	bits;
-	static int	i;
+	static unsigned char	prnt[5];
+	static int				bits;
+	static int				i;
 
 	if (flush == TRUE)
 	{
 		(1) && (bits = 0, i = 0);
-		ft_bzero(prnt);
+		ft_bzero((char *)prnt);
 	}
 	else
 	{
 		if (!bits)
 		{
-			ft_putstr(prnt);
-			ft_bzero(prnt);
 			bits = how_much(c >> 4);
+			if (i > 0)
+			{
+				ft_putstr((char *)prnt);
+				ft_bzero((char *)prnt);
+			}
 			i = 0;
 		}
-		prnt[i] = c;
-		i++;
-		bits--;
+		(1) && (prnt[i] = c, i++, bits--);
 	}
 	return (1);
 }
@@ -57,7 +58,7 @@ static void	sig_hand(int sig, siginfo_t *info, void *context)
 	static int			pid;
 
 	(void)context;
-	if ((!pid || pid != info->si_pid) && handle_out('\0', TRUE))
+	if (pid != info->si_pid && handle_out('\0', TRUE))
 		(1) && (pid = info->si_pid, bits = 0, final_char = 0);
 	if (sig == SIGUSR1)
 		final_char = ((final_char << 1) | 1);
